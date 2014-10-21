@@ -16,6 +16,7 @@ gem 'cloudinary'
 gem 'carrierwave'
 gem 'dotenv-rails', group: :development
 gem 'foundation-rails'
+gem 'rails_12factor'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
