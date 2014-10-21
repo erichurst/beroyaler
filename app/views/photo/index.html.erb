@@ -1,15 +1,18 @@
 <div class="row">
-  <div class="large-12 columns">
-    <h1>Be Royal<em>er</em>!</h1>
+  <header>
+    <h1>The BeRoyalifier!</h1>
+  </header>
+</div>
+<div class="row">
+  <div class="container">
     <p>
-      You know what would make that pretty mug of yours even better looking? An ALCS Champion Kansas
+      You know what would make that pretty mug of yours even prettier? An ALCS Champion Kansas
       City Royals logo!
     </p>
     <p>
       Upload the profile photo of your liking, and our patented <i>BeRoyaler Technology</i> will touch it
       up champion style.
     </p>
-    <p>For best results, upload an image that is at least 500x500 pixels.</p>
 
     <%= form_tag "/" do %>
       <div id="direct_upload">
@@ -17,7 +20,9 @@
       </div>
       <%= cl_image_upload_tag(:image_id, transformation: { width: 350, height: 350, crop: :fill, gravity: :face }) %>
     <% end %>
-    <hr>
+
+    <small>For best results, upload an image that is at least 500x500 pixels.</small>
+
     <ul class='medium-block-grid-3 large-block-grid-3 overlays'>
       <li class='kcScript'>
         <span class='image'></span>
@@ -31,16 +36,16 @@
     </ul>
     
     <span class="status"></span>
-  </div>
-</div>
 
-<div class='row'>
-  <div class="large-12 columns">
-    <h3>Brought to you by SitterHQ</h3>
-    <div class="small-4 medium-2 large-2 columns">
+    <div class="text-center">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.beroyalify.me" data-text="My profile pic just got more Royal with The BeRoyalifier! Check it out." data-size="large" data-count="none" data-hashtags="TakeTheCrown">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
+
+    <h4 class='text-center'>Brought to you by SitterHQ</h4>
+    <div class="medium-2 large-2 columns">
       <%= image_tag "rosalyn_g.jpg", class: 'th' %>
     </div>
-    <div class="small-8 medium-10 large-10 columns">
+    <div class="medium-10 large-10 columns">
       <p>Finding sitters is frustrating. SitterHQ makes it awesome!</p>
       <p>
         SitterHQ is introducing Kansas City to a better way to find babysitters. Sign up to be a Pioneer
@@ -48,4 +53,17 @@
       </p>
     </div>
   </div>
+</div>
+<div class="row">
+  <footer>
+    <p class='text-center'>
+      <small>
+        <em>KC, Royals</em> and the KC Royals logo are trademarks or service marks of Major 
+        League Baseball and are in no way affiliated with this site or SitterHQ.com.
+        <br>
+        None of the <em>technology</em> on this site is actually patented.
+        This is a fan site, and we're just having a good time. Please be nice.
+      </small>
+    </p>  
+  </footer>
 </div>
