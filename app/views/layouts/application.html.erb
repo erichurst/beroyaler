@@ -11,10 +11,9 @@
 <%= yield %>
 
 <%= cloudinary_js_config %>
-<%- @overlays = { kcScript: {overlay: 'kc', gravity: :south_east, width: 0.33, x: 8, y: 8},
-                  kcRoyals: {overlay: 'Royals', gravity: :south_east, width: 0.33, x: 8, y: 8},
-                  kcLogo: {overlay: 'RoyalsLogo', gravity: :south_east, width: 0.33, x: 8, y: 8} } %>
-<%- @transform = [{crop: :fit, width: 350, height: 350}, @overlays] %>
+<%- @overlays = { kcScript: {overlay: 'kc', gravity: :south_east, width: 0.22, x: 8, y: 8},
+                  kcRoyals: {overlay: 'Royals', gravity: :south_east, width: 0.20, x: 8, y: 8},
+                  kcLogo: {overlay: 'RoyalsLogo', gravity: :south_east, width: 0.20, x: 8, y: 8} } %>
 
 <script>
   $(document).ready(function() {
@@ -27,13 +26,13 @@
     // as we do below.
     $(".cloudinary-fileupload")
       .fileupload({ 
-        // Uncomment the following lines to enable client side image resizing and valiation.
+        // Uncomment the following lines to enable client side image resizing and validation.
         // Make sure cloudinary/processing is included the js file
         //disableImageResize: false,
-        //imageMaxWidth: 800,
-        //imageMaxHeight: 600,
-        //acceptFileTypes: /(\.|\/)(gif|jpe?g|png|bmp|ico)$/i,
-        //maxFileSize: 20000000, // 20MB
+        // imageMaxWidth: 350,
+        // imageMaxHeight: 350,
+        acceptFileTypes: /(\.|\/)(gif|jpe?g|png|bmp)$/i,
+        maxFileSize: 5000000, // 5MB
         dropZone: "#direct_upload",
         start: function (e) {
           $(".status").text("Starting upload...");

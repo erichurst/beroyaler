@@ -11,7 +11,7 @@
   <p>For best results, upload an image that is at least 500x500 pixels.</p>
 
   <%= form_tag "/" do %>
-    <%= cl_image_upload_tag(:image_id, transformation: @transform) %>
+    <%= cl_image_upload_tag(:image_id, transformation: { width: 350, height: 350, crop: :fill, gravity: :face }) %>
   <% end %>
 
   <ul class='overlays'>
@@ -27,6 +27,4 @@
   </ul>
   
   <span class="status"></span>
-  <div class="preview"></div>
-  <div id="info"></div>
 </div>
