@@ -1,30 +1,46 @@
-<div id="direct_upload">
-  <h1>Be Royal!</h1>
-  <p>
-    You know what would make that pretty mug of yours even better looking? An ALCS Champion Kansas
-    City Royals logo!
-  </p>
-  <p>
-    Upload the profile photo of your liking, and our patented <i>BeRoyaler Technology</i> will touch it
-    up champion style.
-  </p>
-  <p>For best results, upload an image that is at least 500x500 pixels.</p>
+<div class="row">
+  <div class="large-12 columns">
+    <h1>Be Royal<em>er</em>!</h1>
+    <p>
+      You know what would make that pretty mug of yours even better looking? An ALCS Champion Kansas
+      City Royals logo!
+    </p>
+    <p>
+      Upload the profile photo of your liking, and our patented <i>BeRoyaler Technology</i> will touch it
+      up champion style.
+    </p>
+    <p>For best results, upload an image that is at least 500x500 pixels.</p>
 
-  <%= form_tag "/" do %>
-    <%= cl_image_upload_tag(:image_id, transformation: { width: 350, height: 350, crop: :fill, gravity: :face }) %>
-  <% end %>
+    <%= form_tag "/" do %>
+      <div id="direct_upload">
+        Drag &amp; drop your photo or click the upload button below
+      </div>
+      <%= cl_image_upload_tag(:image_id, transformation: { width: 350, height: 350, crop: :fill, gravity: :face }) %>
+    <% end %>
+    <hr>
+    <ul class='medium-block-grid-3 large-block-grid-3 overlays'>
+      <li class='kcScript'>
+        <span class='image'></span>
+      </li>
+      <li class='kcRoyals'>
+        <span class='image'></span>
+      </li>
+      <li class='kcLogo'>
+        <span class='image'></span>
+      </li>
+    </ul>
+    
+    <span class="status"></span>
+  </div>
+</div>
 
-  <ul class='overlays'>
-    <li class='kcScript'>
-      <span class='image'></span>
-    </li>
-    <li class='kcRoyals'>
-      <span class='image'></span>
-    </li>
-    <li class='kcLogo'>
-      <span class='image'></span>
-    </li>
-  </ul>
-  
-  <span class="status"></span>
+<div class='row'>
+  <div class="large-12 columns">
+    <h3>Brought to you by SitterHQ</h3>
+    <p>Finding sitters is frustrating. SitterHQ makes it awesome!</p>
+    <p>
+      SitterHQ is introducing Kansas City to a better way to find babysitters. Sign up to be a Pioneer
+      at <a href="http://www.sitterhq.com">SitterHQ.com</a>.
+    </p>
+  </div>
 </div>

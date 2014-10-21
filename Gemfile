@@ -15,6 +15,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'cloudinary'
 gem 'carrierwave'
 gem 'dotenv-rails', group: :development
+gem 'foundation-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

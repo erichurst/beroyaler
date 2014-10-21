@@ -2,8 +2,10 @@
 <html>
 <head>
   <title>Beroyal</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'vendor/modernizr' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -52,6 +54,7 @@
               $.extend({ format: data.result.format, version: data.result.version }, overlay))               
           );
         });
+        $(".overlays").append("<p>You've got options for saving:<ol><li>Tap and hold to save to your mobile device, if you're using one.</li><li>Drag your images to your desktop.</li><li>Or good old fashioned right-click and save</li></ol></p>");
       });
     });
     
