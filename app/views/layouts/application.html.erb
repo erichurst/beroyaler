@@ -29,9 +29,9 @@
 <%= yield %>
 
 <%= cloudinary_js_config %>
-<%- @overlays = { kcScript: {overlay: 'kc', gravity: :south_east, width: 0.22, x: 8, y: 8},
-                  kcRoyals: {overlay: 'Royals', gravity: :south_east, width: 0.20, x: 8, y: 8},
-                  kcLogo: {overlay: 'RoyalsLogo', gravity: :south_east, width: 0.20, x: 8, y: 8} } %>
+<%- @overlays = { kcScript: {overlay: 'kc', gravity: :south_east, width: 0.32, x: 10, y: 10},
+                  kcRoyals: {overlay: 'Royals', gravity: :south_east, width: 0.30, x: 10, y: 10},
+                  kcLogo: {overlay: 'RoyalsLogo', gravity: :south_east, width: 0.30, x: 10, y: 10} } %>
 
 <script>
   $(document).ready(function() {
@@ -64,13 +64,14 @@
       })
       .off("cloudinarydone").on("cloudinarydone", function (e, data) {
         $(".status").text("");
+        $("<hr>").prependTo(".overlays");
         $.each(overlays, function(kind, overlay) {
           $('.overlays .' + kind + ' .image').html(              
             $.cloudinary.image(data.result.public_id, 
               $.extend({ format: data.result.format, version: data.result.version }, overlay))               
-          );
+          ).addClass("th");
         });
-        $(".overlays").after("<div class='row'><div class='large-12 columns'><p>You've got options for saving:<ol><li>Tap and hold to save to your mobile device, if you're using one.</li><li>Drag your images to your desktop.</li><li>Or good old fashioned right-click and save</li></ol></p></div></div><hr>");
+        $(".overlays").append("<div class='columns'><p>You've got options for saving:<ol><li>Tap and hold to save to your mobile device, if you're using one.</li><li>Drag your images to your desktop.</li><li>Or good old fashioned right-click and save</li></ol></p></div>");
       });
     });
     

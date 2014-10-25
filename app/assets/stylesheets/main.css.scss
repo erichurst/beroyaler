@@ -11,7 +11,7 @@ html,body {
 }
 
 header {
-  padding: 3em 0;
+  padding: 1em 0;
   h1 {
     color: #fff;
     font-family: 'Arvo', serif;
@@ -20,7 +20,7 @@ header {
   }
   @media only screen and (min-width: 64.063em) {
     h1 {
-      font-size: 600%;
+      font-size: 500%;
     }
   }
 }
@@ -30,15 +30,35 @@ footer {
 }
 
 .container {
-  background: rgba(252,255,252,0.75);
-  overflow: auto;
-  padding: 2em;
+  background: rgba(255,255,255,0.85);
+  padding-top: 2em;
+  padding-bottom: 2em;
   border-radius: 4px;
+  margin-bottom: 2em;
+  &.ad {
+    background: rgba(255,255,255,0.95);
+  }
 }
 
-.cloudinary-fileupload {
-  /* opacity: 0; */
-  /* filter: alpha(opacity=0); */
+.file-upload {
+  position: relative;
+}
+
+.button, .cloudinary-fileupload {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+input[type='file'] {
+  position: relative;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  -o-opacity: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: 2;
 }
 
 .upload {
@@ -55,7 +75,7 @@ footer {
     border-radius: 4px;
     border: 3px dashed #aaa;
     text-align: center;
-    line-height: 5em;
+    line-height: 3.5em;
     color: #aaa;
   }
 }
