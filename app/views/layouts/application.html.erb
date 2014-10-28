@@ -29,7 +29,8 @@
 <%= yield %>
 
 <%= cloudinary_js_config %>
-<%- @overlays = { kcScript: {overlay: 'kc', gravity: :south_east, width: 0.32, x: 10, y: 10},
+<%- @overlays = { believe: {overlay: 'believe', gravity: :south_east, width: 0.50, x: 10, y: 10},
+                  kcScript: {overlay: 'kc', gravity: :south_east, width: 0.32, x: 10, y: 10},
                   kcRoyals: {overlay: 'Royals', gravity: :south_east, width: 0.30, x: 10, y: 10},
                   kcLogo: {overlay: 'RoyalsLogo', gravity: :south_east, width: 0.30, x: 10, y: 10} } %>
 
