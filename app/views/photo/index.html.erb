@@ -4,15 +4,22 @@
 
 <div class="medium-10 large-10 medium-offset-1 large-offset-1 columns">
   <div class="container">
-    <p class='large-6 columns'>
-      You know what would make that pretty mug of yours even prettier? An ALCS Champion Kansas
-      City Royals logo!
-    </p>
-    <p class='large-6 columns'>
-      Upload the profile photo of your liking, and our patented <i>BeRoyaler Technology</i> will touch it
-      up champion style.
-    </p>
-    <hr>
+    <div class="medium-12 large-12 columns">
+      <div class="medium-8 large-8 columns">
+        <p class='boost'>
+          Our Kansas City Royals treated us to an amazing season, and easily one of the most memorable Octobers ever. Show your gratitude to
+          Salvy, Gordo, Country Breakfast, Mr. Zoombiya, and the rest of the boys in blue with a <em>Thanks! KC</em> logo on your profile photo.
+        </p>
+        <p class='boost'>
+          Upload the profile photo of your liking, and our patented <i>BeRoyaler Technology</i> will touch it
+          up with gratitude and memories.
+        </p>
+      </div>
+      <div class="medium-4 large-4 columns">
+        <img class='example th' src="http://res.cloudinary.com/dtembkrlo/image/upload/c_fill,g_face,h_640,w_640/c_scale,g_south_east,h_271,l_thanks_kc_4,x_10,y_10/v1414760923/ape_m4dq4j.jpg" alt="Thanks! KC">
+      </div>
+      <hr>
+    </div>
     <%= form_tag "/" do %>
       <div class="large-6 columns">
         <div id="direct_upload">
@@ -29,25 +36,10 @@
       </div>
     <% end %>
 
-    <hr>
-
     <div class='row'>
-      <ul class='small-block-grid-2 medium-block-grid-4 large-block-grid-4 overlays'>
-        <li class="believe">
-          <span class="image th">
-            <%= link_to cl_private_download_url("nwqyw4awdcw4ai2zxmfl", :jpg, attachment: true) do %>
-              <img src="http://res.cloudinary.com/dtembkrlo/image/upload/g_south_east,l_believe,w_0.5,x_10,y_10/v1414522150/nwqyw4awdcw4ai2zxmfl.jpg">
-            <% end %>
-          </span>
-        </li>
-        <li class="kcScript">
-          <span class="image th"><img src="http://res.cloudinary.com/dtembkrlo/image/upload/g_south_east,l_kc,w_0.32,x_10,y_10/v1414522150/nwqyw4awdcw4ai2zxmfl.jpg"></span>
-        </li>
-        <li class="kcRoyals">
-          <span class="image th"><img src="http://res.cloudinary.com/dtembkrlo/image/upload/g_south_east,l_Royals,w_0.3,x_10,y_10/v1414522150/nwqyw4awdcw4ai2zxmfl.jpg"></span>
-        </li>
-        <li class="kcLogo">
-          <span class="image th"><img src="http://res.cloudinary.com/dtembkrlo/image/upload/g_south_east,l_RoyalsLogo,w_0.3,x_10,y_10/v1414522150/nwqyw4awdcw4ai2zxmfl.jpg"></span>
+      <ul class='overlays text-center'>
+        <li class="thanksKc">
+          <span class="image"></span>
         </li>
       </ul>
     </div>
@@ -55,7 +47,7 @@
     <span class="status"></span>
 
     <div class="text-center">
-      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.beroyalify.me" data-text="My profile pic just got more Royal with The BeRoyalifier! Check it out." data-size="large" data-count="none" data-hashtags="TakeTheCrown">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.beroyalify.me" data-text="I just used The BeRoyalifier to tell my Royals Thanks! Check it out." data-size="large" data-count="none" data-hashtags="Royals">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       <br>
       <small>Upload an image at least 800x800 pixels for a good time.</small>
     </div>
